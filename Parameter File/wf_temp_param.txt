@@ -1,0 +1,9 @@
+[global]
+$DBConnection_STG=A11_CAPSTONE_STG
+$DBConnection_DIM=A11_CAPSTONE_DIM
+$PMSourceFileDir=E:\Training\Assignment 11 - Capstone\Source
+$InputFileName_TRAD=CM_MKT_TRAD_GD_ZS.csv
+$InputFileName_TRNR=CM_MKT_TRNR.csv
+$InputFileName_TRAD_IND=Indicator_CM_MKT_TRAD_GD_ZS.csv
+$InputFileName_TRNR_IND=Indicator_CM_MKT_TRNR.csv
+$InputFileName_COUNTRY=Country_CM_MKT_TRAD_GD_ZS.csv

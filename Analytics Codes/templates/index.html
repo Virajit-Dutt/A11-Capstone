@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trade Analytics</title>
+</head>
+<body>
+    <h1>Trade Analytics</h1>
+    <fieldset>
+        <legend><b>Country vs Trade Value for each year</b></legend>
+        <br>
+        <form action="/cnt_trade_plot" method="POST">
+            <label for="country">Select Country:</label>
+            <select name="country" id="country">
+                {% for country in countries %}
+                <option value="{{ country }}">{{ country }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <label for="indicator">Select Indicator:</label>
+            <select name="indicator" id="indicator">
+                {% for indicator in indicators %}
+                <option value="{{ indicator }}">{{ indicator }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <button type="submit">Generate Plot</button>
+        </form>
+        <br>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend><b>Country vs Trade Value for each decade</b></legend>
+        <br>
+        <form action="/decade_plot" method="POST">
+            <label for="country_decade">Select Country:</label>
+            <select name="country_decade" id="country_decade">
+                {% for country in countries %}
+                <option value="{{ country }}">{{ country }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <label for="indicator_decade">Select Indicator:</label>
+            <select name="indicator_decade" id="indicator_decade">
+                {% for indicator in indicators %}
+                <option value="{{ indicator }}">{{ indicator }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <button type="submit">Generate Decade Comparison Plot</button>
+        </form>
+        <br>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend><b>Region vs Year</b></legend>
+        <br>
+        <form action="/region_year_plot" method="POST">
+            <label for="region_year">Select Region:</label>
+            <select name="region_year" id="region_year">
+                {% for region in regions %}
+                    <option value="{{ region }}">{{ region }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <label for="indicator_year">Select Indicator:</label>
+            <select name="indicator_year" id="indicator_year">
+                {% for indicator in indicators %}
+                    <option value="{{ indicator }}">{{ indicator }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <input type="submit" value="Generate Graph">
+        </form>
+        <br>  
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend><b>Income Group vs Trade Value</b></legend>
+        <br>
+        <form action="/income_year_plot" method="POST">
+            <label for="income_year">Select Income Group:</label>
+            <select name="income_year" id="income_year">
+                {% for income_group in income_groups %}
+                    <option value="{{ income_group }}">{{ income_group }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <label for="indicator_year">Select Indicator:</label>
+            <select name="indicator_year" id="indicator_year">
+                {% for indicator in indicators %}
+                    <option value="{{ indicator }}">{{ indicator }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <input type="submit" value="Generate Graph">
+        </form>
+        <br>        
+    </fieldset>
+</body>
+</html>
